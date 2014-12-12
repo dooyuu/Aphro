@@ -5,6 +5,23 @@ Aphro
 
 
 
+How To Run
+===
+
+```
+git clone https://github.com/alayii/Aphro.git
+
+cd Aphro && npm install
+
+```
+
+For Dev
+
+```
+DEBUG=Aphro ./bin/www
+
+
+
 路线图
 ===
 
