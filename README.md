@@ -25,7 +25,7 @@ DEBUG=Aphro ./bin/www
 Components
 ===
 
-已使用
+## 已使用
 
 模板引擎
 
@@ -35,7 +35,7 @@ Handlebars
 
 Semantic UI
 
-预备使用
+## 预备使用
 
 MongoDB
 
