@@ -18,7 +18,7 @@ LICENSE
 ===
 The MIT License (MIT)
 
-Copyright (c) 2014 bin Lee
+Copyright (c) 2014 alayii, dongyu
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
