@@ -22,6 +22,27 @@ DEBUG=Aphro ./bin/www
 ```
 
 
+Components
+===
+
+已使用
+
+模板引擎
+
+Handlebars
+
+前端框架
+
+Semantic UI
+
+预备使用
+
+MongoDB
+
+Cheerio(用于爬虫)
+
+
+
 路线图
 ===
 
