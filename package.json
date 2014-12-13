@@ -1,6 +1,6 @@
 {
   "name": "Aphro",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
@@ -12,7 +12,9 @@
     "express": "^4.9.8",
     "hbs": "~2.7.0",
     "less-middleware": "1.0.x",
+    "mongoose": "^3.8.20",
     "morgan": "~1.3.0",
+    "request": "^2.51.0",
     "semantic-ui": "^1.2.0",
     "serve-favicon": "~2.1.3"
   }

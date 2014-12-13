@@ -1,0 +1,1 @@
+exports.Detail = require('./detail');
