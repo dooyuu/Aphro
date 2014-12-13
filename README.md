@@ -5,6 +5,12 @@ Aphro
 
 
 
+Prerequisites
+====
+
+MongoDB
+
+
 How To Run
 ===
 
@@ -27,19 +33,18 @@ Components
 
 ### 已使用
 
-模板引擎
 
-Handlebars
+* Handlebars
 
-前端框架
+* Semantic UI
 
-Semantic UI
+* Mongoose
+
+* Request
 
 ### 预备使用
 
-MongoDB
-
-Cheerio(用于爬虫)
+* Cheerio
 
 
 
