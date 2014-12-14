@@ -25,7 +25,7 @@ exports.newAndSave = function (data, callback) {
         movie.original_title = data.original_title;
         movie.rating = data.rating;
         movie.rating_count = data.rating_count;
-        movie.images = data.images;
+        movie.image = data.image;
 
         movie.subtype = data.subtype;
         movie.directors = data.directors;

@@ -11,7 +11,7 @@ var MovieSchema = new Schema({
     original_title: {type: String},
     rating: {type: Object},
     rating_count: {type: Number},
-    images: {type: Object},
+    image: {type: String},
         
     // 条目分类, movie 或 tv
     subtype: {type: String},

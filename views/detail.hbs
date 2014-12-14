@@ -18,32 +18,16 @@
 </div>
 
 <div class="ui page grid">
- 
-    {{#movies}}
+
     <div class="five wide column">
         <div class="ui cards">
             <div class="card">
                 <div class="image">
                     <img src="{{ image }}" alt="">
                 </div>
-                <div class="content">
-                    <div class="header">
-                        <a href="/{{ _id }}">
-                        {{ title }}
-                        </a>
-                    </div>
-                    <div class="meta">
-                        {{#each genres}}
-                            <a href="/category/{{ this }}">{{ this }}</a>
-                        {{/each}}
-                    </div>
-                    <div class="description">
-                        {{ summary }}
-                    </div>
-                </div>
             </div>
         </div>
     </div>
-    {{/movies}}
+
 
 </div>
