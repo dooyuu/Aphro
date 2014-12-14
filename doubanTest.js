@@ -16,7 +16,6 @@ function infinite() {
                 if (err) {
                     console.error(err);
                 }
-                console.dir(movie);
             });
         }
     });
