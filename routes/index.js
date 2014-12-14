@@ -1,7 +1,7 @@
 // 所有的路由写在这里
 
 var express = require('express');
-var detail = require('../controllers/detail');
+var movie = require('../controllers/movie');
 
 var router = express.Router();
 
@@ -16,6 +16,6 @@ router.get('/', function(req, res) {
 
 
 // 电影详细
-router.get('/:id', detail.index);
+router.get('/:id', movie.index);
 
 module.exports = router;

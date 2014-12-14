@@ -1,20 +1,20 @@
-var Detail = require('../proxy').Detail;
+var Movie = require('../proxy').Movie;
 
 exports.index = function(req, res, next) {
     
     var id = req.params.id;
-    Detail.getMovieById(id, function(err, detail) {
+    Movie.getMovieById(id, function(err, movie) {
         if (err) {
             return next(err); 
         } 
 
-        if (!detail) {
+        if (!movie) {
             res.send('电影还未收录或来自未来');
             return;
         }
 
-        res.render('/:id', {
-            detail: detail
+        res.render('movie', {
+            movie: movie 
         });
     });
 };

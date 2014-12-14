@@ -1,7 +1,7 @@
 var models = require('../models');
-var Detail = models.Detail;
+var Movie = models.Movie;
 
 
 exports.getMovieById = function(id, callback) {
-    Detail.findOne({'id': id}, callback);
+    Movie.findOne({'id': id}, callback);
 };
