@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 
 
 // 参见豆瓣 API V2 http://developers.douban.com/wiki/?title=movie_v2#subject
-var DetailSchema = new Schema({
+var MovieSchema = new Schema({
 
     id: {type: String},
     title: {type: String},
@@ -33,4 +33,4 @@ var DetailSchema = new Schema({
 });
 
 
-mongoose.model('Detail', DetailSchema);
+mongoose.model('Movie', MovieSchema);

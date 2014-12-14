@@ -1,1 +1,1 @@
-exports.Detail = require('./detail');
+exports.Movie = require('./movie');

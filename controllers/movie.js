@@ -1,9 +1,9 @@
-var Detail = require('../proxy').Detail;
+var Movie = require('../proxy').Movie;
 
 exports.index = function(req, res, next) {
     
     var id = req.params.id;
-    Detail.getMovieById(id, function(err, detail) {
+    Movie.getMovieById(id, function(err, detail) {
         if (err) {
             return next(err); 
         } 
@@ -16,5 +16,6 @@ exports.index = function(req, res, next) {
         res.render('/:id', {
             detail: detail
         });
+
     });
 };
