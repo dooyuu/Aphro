@@ -13,4 +13,6 @@ mongoose.connect(config.db, function(err) {
 
 require('./movie');
 
-exports.Movie = mongoose.model('Movie');
+
+exports.Movie= mongoose.model('Movie');
+

@@ -24,17 +24,19 @@
         <div class="ui cards">
             <div class="card">
                 <div class="image">
-                    <img src="{{ image }}" alt="">
+                    <a href="/{{ id }}">
+                    <img src="http://aphro.com/get/{{ images.large }}" alt="">
+                    </a>
                 </div>
                 <div class="content">
                     <div class="header">
-                        <a href="/{{ _id }}">
+                        <a href="/{{ id }}">
                         {{ title }}
                         </a>
                     </div>
                     <div class="meta">
                         {{#each genres}}
-                            <a href="/category/{{ this }}">{{ this }}</a>
+                            <a href="/tag/{{ this }}">{{ this }}</a>
                         {{/each}}
                     </div>
                     <div class="description">

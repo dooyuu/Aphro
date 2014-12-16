@@ -3,7 +3,6 @@
 var express = require('express');
 
 var site = require('../controllers/site');
-var movie = require('../controllers/movie');
 
 var router = express.Router();
 
@@ -14,6 +13,8 @@ var router = express.Router();
 router.get('/', site.index);
 
 // 电影详细
-router.get('/:id', movie.index);
+router.get('/:id', site.movie);
+
+router.get('/tag/:tag', site.tag);
 
 module.exports = router;

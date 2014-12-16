@@ -9,9 +9,10 @@ var MovieSchema = new Schema({
     id: {type: String},
     title: {type: String},
     original_title: {type: String},
+    aka: {type: Array},
     rating: {type: Object},
     rating_count: {type: Number},
-    image: {type: String},
+    images: {type: Object},
         
     // 条目分类, movie 或 tv
     subtype: {type: String},
