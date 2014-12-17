@@ -18,80 +18,34 @@
 </div>
 
 <div class="ui page grid">
+ 
+    {{#movies}}
     <div class="five wide column">
         <div class="ui cards">
             <div class="card">
                 <div class="image">
-                    图片
-                    <img src="" alt="">
+                    <a href="/{{ id }}">
+                    <img src="/get/{{ images.large }}" alt="">
+                    </a>
                 </div>
                 <div class="content">
                     <div class="header">
-                        电影名
+                        <a href="/{{ id }}">
+                        {{ title }}
+                        </a>
                     </div>
-                    <div class="meta">分类</div>
+                    <div class="meta">
+                        {{#each genres}}
+                            <a href="/tag/{{ this }}">{{ this }}</a>
+                        {{/each}}
+                    </div>
                     <div class="description">
-                        简略描述
+                        {{ summary }}
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="five wide column">
-        <div class="ui cards">
-            <div class="card">
-                <div class="image">
-                    图片
-                    <img src="" alt="">
-                </div>
-                <div class="content">
-                    <div class="header">
-                        电影名
-                    </div>
-                    <div class="meta">分类</div>
-                    <div class="description">
-                        简略描述
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="five wide column">
-        <div class="ui cards">
-            <div class="card">
-                <div class="image">
-                    图片
-                    <img src="" alt="">
-                </div>
-                <div class="content">
-                    <div class="header">
-                        电影名
-                    </div>
-                    <div class="meta">分类</div>
-                    <div class="description">
-                        简略描述
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="five wide column">
-        <div class="ui cards">
-            <div class="card">
-                <div class="image">
-                    图片
-                    <img src="" alt="">
-                </div>
-                <div class="content">
-                    <div class="header">
-                        电影名
-                    </div>
-                    <div class="meta">分类</div>
-                    <div class="description">
-                        简略描述
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    {{/movies}}
+
 </div>
