@@ -1,4 +1,40 @@
-<div class="title">
-    {{ movie.title }}
+<div class="ui page grid">
+    <div class="column">
+         <div class="ui logo">
+            Logo 
+         </div>
+    </div>
 </div>
-<img src="http://aphro.com/get/{{ movie.images.large }}" alt="">
+
+
+
+<div class="ui page grid">
+
+    <div class="five wide column">
+        <div class="ui cards">
+            <div class="card">
+                <div class="image">
+                    <a href="/{{ id }}">
+                    <img src="http://aphro.com/get/{{ images.large }}" alt="">
+                    </a>
+                </div>
+                <div class="content">
+                    <div class="header">
+                        <a href="/{{ id }}">
+                        {{ title }}
+                        </a>
+                    </div>
+                    <div class="meta">
+                        {{#each genres}}
+                            <a href="/tag/{{ this }}">{{ this }}</a>
+                        {{/each}}
+                    </div>
+                    <div class="description">
+                        {{ summary }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
