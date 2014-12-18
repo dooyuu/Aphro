@@ -51,10 +51,9 @@ Components
 路线图
 ===
 
-1. 网站的基本结构。
-2. 后端的爬虫程序。
-3. 分离爬虫程序，独立为模块。
-
+1. 网站的基本逻辑。
+2. 豆瓣 API npm module.
+3. YTS API npm module.
 
 
 LICENSE

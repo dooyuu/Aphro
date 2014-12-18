@@ -14,23 +14,32 @@
         <div class="ui cards">
             <div class="card">
                 <div class="image">
-                    <a href="/{{ id }}">
-                    <img src="http://aphro.com/get/{{ images.large }}" alt="">
+                    <a href="/{{ movie.id }}">
+                    <img src="http://aphro.com/get/{{ movie.images.medium }}" alt="">
                     </a>
                 </div>
                 <div class="content">
                     <div class="header">
-                        <a href="/{{ id }}">
-                        {{ title }}
-                        </a>
+                        {{ movie.title }}
                     </div>
                     <div class="meta">
-                        {{#each genres}}
+                        {{#each movie.genres}}
                             <a href="/tag/{{ this }}">{{ this }}</a>
                         {{/each}}
                     </div>
                     <div class="description">
-                        {{ summary }}
+                        {{ movie.summary }}
+                    </div>
+
+                    <div class="torrents">
+                        {{#each movie.torrents}}
+                        <ul>
+                           <li>{{ size }}</li> 
+                           <li>{{ torrent_url }}</li>
+                           <li>{{ quality }}</li>
+                           <li>{{ torrent_matnet_url }}</li>
+                        </ul>
+                        {{/each}}
                     </div>
                 </div>
             </div>
@@ -38,3 +47,5 @@
     </div>
 
 </div>
+
+

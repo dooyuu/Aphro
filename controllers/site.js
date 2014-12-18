@@ -1,4 +1,4 @@
-var Movie = require('../proxy/movie');
+var Movie = require('../proxy').Movie;
 
 exports.index = function (req, res, next) {
     Movie.getMovies({}, function (err, movies) {
@@ -12,8 +12,10 @@ exports.index = function (req, res, next) {
 exports.movie = function (req, res, next) {
     var id = req.params.id;
     Movie.getMovieById(id, function (err, movie) {
+        
+        console.log(movie);
         res.render('movie', {movie: movie});
-    })
+    });
 };
 
 
@@ -26,4 +28,4 @@ exports.tag = function (req, res, next) {
         }
         res.render('index', {movies: movies});
     });
-}
+};
