@@ -25,32 +25,40 @@
 <div class="ui center aligned page grid movies">
  
     {{#movies}}
-        <div class="five wide column">
-            <div class="ui cards">
-                <div class="card">
-                    <div class="image">
+    <div class="five wide column">
+        <div class="ui cards">
+            <div class="card">
+                <div class="image">
+                    <a href="/{{ id }}">
+                    <img src="/get/{{ images.large}}" alt="">
+                    </a>
+                </div>
+                <div class="content">
+                    <div class="header">
                         <a href="/{{ id }}">
-                        <img src="/get/{{ images.large}}" alt="">
+                        {{ title }}
                         </a>
                     </div>
-                    <div class="content">
-                        <div class="header">
-                            <a href="/{{ id }}">
-                            {{ title }}
-                            </a>
-                        </div>
-                        <div class="meta">
-                            {{#each genres}}
-                                <a href="/tag/{{ this }}">{{ this }}</a>
-                            {{/each}}
-                        </div>
-                        <div class="description">
-                            <div class="ui star rating" data-original-rating="{{ rating.average }}"></div>
+                    <div class="meta">
+                        {{#each genres}}
+                            <a href="/tag/{{ this }}">{{ this }}</a>
+                        {{/each}}
+                    </div>
+                    <div class="description">
+                        <div class="ui star rating" data-original-rating="{{ rating.average }}"></div>
+                        <div class="ui floating dropdown button">
+                            <i class="download icon"></i>
+                            <span class="text">download</span>
+                            <div class="menu">
+                                {{!-- 需要链接 --}}
+                                <a class="item" href="http://www.google.com/">种子</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     {{/movies}}
 
 </div>

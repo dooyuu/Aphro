@@ -10,4 +10,12 @@ $(document).ready(function() {
             maxRating: 5
         });
     });
+
+    $('.movies .card .description .dropdown').each(function() {
+        
+        $(this).dropdown({
+            action: 'hide',
+            transition: 'drop'
+        });
+    });
 });
