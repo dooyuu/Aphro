@@ -17,35 +17,40 @@
     </div>
 </div>
 
-<div class="ui page grid">
+<div class="ui grid">
+    <div class="five column"></div>
+    <div class="five column"></div>
+</div>
+
+<div class="ui center aligned page grid movies">
  
     {{#movies}}
-    <div class="five wide column">
-        <div class="ui cards">
-            <div class="card">
-                <div class="image">
-                    <a href="/{{ id }}">
-                    <img src="/get/{{ images.large }}" alt="">
-                    </a>
-                </div>
-                <div class="content">
-                    <div class="header">
+        <div class="five wide column">
+            <div class="ui cards">
+                <div class="card">
+                    <div class="image">
                         <a href="/{{ id }}">
-                        {{ title }}
+                        <img src="/get/{{ images.large}}" alt="">
                         </a>
                     </div>
-                    <div class="meta">
-                        {{#each genres}}
-                            <a href="/tag/{{ this }}">{{ this }}</a>
-                        {{/each}}
-                    </div>
-                    <div class="description">
-                        {{ summary }}
+                    <div class="content">
+                        <div class="header">
+                            <a href="/{{ id }}">
+                            {{ title }}
+                            </a>
+                        </div>
+                        <div class="meta">
+                            {{#each genres}}
+                                <a href="/tag/{{ this }}">{{ this }}</a>
+                            {{/each}}
+                        </div>
+                        <div class="description">
+                            <div class="ui star rating" data-original-rating="{{ rating.average }}"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     {{/movies}}
 
 </div>
