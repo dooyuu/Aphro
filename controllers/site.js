@@ -12,6 +12,8 @@ exports.index = function (req, res, next) {
 exports.movie = function (req, res, next) {
     var id = req.params.id;
     Movie.getMovieById(id, function (err, movie) {
+        
+        console.log(movie);
         res.render('movie', {movie: movie});
     });
 };

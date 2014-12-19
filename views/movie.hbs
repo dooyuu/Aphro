@@ -1,6 +1,51 @@
-<div class="title">
-    {{ movie.title }}
-    {{ movie.rating.average }}
-    {{ movie.wish_count }}
+<div class="ui page grid">
+    <div class="column">
+         <div class="ui logo">
+            Logo 
+         </div>
+    </div>
 </div>
-<img src="/get/{{ movie.images.medium }}" alt="">
+
+
+
+<div class="ui page grid">
+
+    <div class="five wide column">
+        <div class="ui cards">
+            <div class="card">
+                <div class="image">
+                    <a href="/{{ movie.id }}">
+                    <img src="http://aphro.com/get/{{ movie.images.medium }}" alt="">
+                    </a>
+                </div>
+                <div class="content">
+                    <div class="header">
+                        {{ movie.title }}
+                    </div>
+                    <div class="meta">
+                        {{#each movie.genres}}
+                            <a href="/tag/{{ this }}">{{ this }}</a>
+                        {{/each}}
+                    </div>
+                    <div class="description">
+                        {{ movie.summary }}
+                    </div>
+
+                    <div class="torrents">
+                        {{#each movie.torrents}}
+                        <ul>
+                           <li>{{ size }}</li> 
+                           <li>{{ torrent_url }}</li>
+                           <li>{{ quality }}</li>
+                           <li>{{ torrent_matnet_url }}</li>
+                        </ul>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+

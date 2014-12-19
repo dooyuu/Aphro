@@ -30,6 +30,9 @@ var MovieSchema = new Schema({
     seasons_count: {type: Number},
     current_season: {type: Number},
     episodes_counts: {type: Number},
+
+    // 种子链接
+    torrents: {type: Array}
     
 });
 
