@@ -1,9 +1,22 @@
 var request = require('request');
 var Movie = require('./proxy').Movie;
+var config  = require('./config');
+var fs = require('fs');
+
+config.page_start += 20;
+
+
+// 更新配置分页
+var str = "var path = require('path');\n\n";
+    str += "var config = ";
+    str += JSON.stringify(config, ' ', 4);
+    str += ';\n\nmodule.exports = config;';
+
+fs.writeFileSync('./config.js', str);
 
 
 
-var listApi = 'http://movie.douban.com/j/search_subjects?type=movie&tag=%E7%BB%8F%E5%85%B8&sort=recommend&page_limit=20&page_start=20';
+var listApi = 'http://movie.douban.com/j/search_subjects?type=movie&tag=%E7%BB%8F%E5%85%B8&sort=recommend&page_limit=20&page_start=' + config.page_start;
 
 var detailApi = 'http://api.douban.com/v2/movie/subject/';
 
@@ -31,6 +44,11 @@ function infinite() {
                             } else {
 
                                 var detail = JSON.parse(body);
+
+                                // 跳过小于 7 分的电影
+                                if (detail.rate < 7) {
+                                    return ;
+                                }
 
                                 // 抓取种子
                                 request(torrentApi + detail.original_title, function (err, res, body) {

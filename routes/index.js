@@ -4,6 +4,8 @@ var express = require('express');
 
 var site = require('../controllers/site');
 
+var movie = require('../api/movie');
+
 var router = express.Router();
 
 
@@ -16,5 +18,7 @@ router.get('/', site.index);
 router.get('/:id', site.movie);
 
 router.get('/tag/:tag', site.tag);
+
+router.get('/api/movie', movie.index);
 
 module.exports = router;
